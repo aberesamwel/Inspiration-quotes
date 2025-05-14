@@ -44,9 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // -------- QUOTE GENERATION --------
+  // Random quotes according to the mood selected
   let quotes = {
     happy: [
+      "Happiness is choice. – Samuel maina",
       "Happiness is not something ready made. It comes from your own actions. – Dalai Lama",
       "For every minute you are angry, you lose sixty seconds of happiness. – Ralph Waldo Emerson",
       "Happiness is a warm puppy. – Charles M. Schulz"
@@ -65,7 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
       "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt",
       "It always seems impossible until it’s done. – Nelson Mandela",
       "What lies behind us and what lies before us are tiny matters compared to what lies within us. – Ralph Waldo Emerson"
-    ]
+    ],
+    religional: [
+      "Do not stay under the devil’s shade. – Samuel Maina",
+      "Get your eyes off your problems and PRAY to GOD. – Samuel Maina",
+    ],
   };
 
   // Load from localStorage if quotes were previously saved
