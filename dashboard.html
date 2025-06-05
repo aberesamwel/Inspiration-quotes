@@ -4,35 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard - Inspiration Quotes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css" />
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
   <header>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-       <li><a href="login.html">Login</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
+        <li id="login-link"><a href="login.html">Login</a></li>
+        <li id="dashboard-link"><a href="dashboard.html">Dashboard</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <h2>Welcome to Your Dashboard, <span id="user-name">Guest</span></h2>
+    <h2>Welcome to Your Dashboard, <span id="user-name" class="bg-sky-500 font-size: var(--text-5xl); /* 3rem (48px) */ 
+line-height: var(--text-5xl--line-height); /* 1 */ font-weight: 900;">Guest</span></h2>
     <p>Select your mood to generate a quote:</p>
-    <div class="mood-buttons">
-      <button onclick="generateQuote('happy')">Happy</button>
-      <button onclick="generateQuote('sad')">Sad</button>
-      <button onclick="generateQuote('motivational')">Motivational</button>
-      <button onclick="generateQuote('inspirational')">Inspirational</button>
-      <button onclick="generateQuote('religious')">Religious</button>
+ <section id="quoteSection" class=" text-white px-4 py-8  max-w-md mx-auto">
+    <div class="relative rounded-lg overflow-hidden shadow-lg" id="quoteCard">
+      <!-- Image -->
+      <img id="quoteImage" class="w-full h-120 object-cover" src="./script.js" alt="Sample">
+
+
+      <!-- Overlayed Quote -->
+      <div class="absolute inset-0 bg-opacity-50 flex flex-col justify-center items-center text-center p-4">
+        <p id="quoteText" class="text-lg font-semibold mb-2 text-white drop-shadow">
+        </p>
+        <p id="quoteAuthor" class="text-sm italic text-gray-200">
+          — Unknown
+        </p>
+      </div>
     </div>
-    <div id="quote-container">
-      <p id="quote">Your personalized quote will appear here...</p>
-    </div>
+
+    <!--  Hidden Audio Player -->
+    <audio id="backgroundMusic" loop>
+      <source type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+  </section>
+
+
+  <!-- Button -->
+  <div class="text-center mt-4">
+    <button onclick="generateQuote()"
+      class="bg-white text-blue-600 font-bold px-4 py-2 rounded hover:bg-gray-200 transition">
+      New Quote`
+    </button>
+  </div>
+  </section>
+   
   </main>
   <footer>
     <p>&copy;2025 Inspiration Quotes</p>
   </footer>
-  <script src="src/script.js"></script>
+  <script src="./src/script.js"></script>
 </body>
 </html>

@@ -11,22 +11,25 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
+        <li id="login-link"><a href="login.html">Login</a></li>
+        <li id="dashboard-link"><a href="dashboard.html">Dashboard</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <form id="login-form">
-      <h2>Login</h2>
       <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required />
+      <input type="text" id="username" required>
+    
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required />
+      <div style="position: relative;">
+        <input type="password" id="password" required>
+        <button type="button" id="toggle-password" style="position:absolute; top:0; right:0;">👁️</button>
+      </div>
+    
       <button type="submit">Login</button>
     </form>
-    <button id="logout">Logout</button>
-
+    
   </main>
   <footer>
     <p>&copy;2025 Inspiration Quotes</p>

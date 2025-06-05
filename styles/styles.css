@@ -74,6 +74,9 @@ main {
   max-width: 800px;
   margin: auto;
 }
+/* nav ul li a:login {
+  display: none;
+}  */
 
 #background {
   background-image: url(../assets/images/images/istockphoto-1385090168-1024x1024.jpg);
@@ -141,7 +144,7 @@ form button:hover,
 
 .mood-buttons button {
   flex: 1;
-  min-width: 120px;
+  min-width: 100px;
   background: #ffd166;
   color: #1f3b4d;
   border: none;
@@ -205,4 +208,54 @@ footer {
   main {
     padding: 1rem;
   }
+}
+/* styles.css */
+/* body {
+  margin: 0;
+  padding: 0;
+  background: #f7f5f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+} */
+
+.quote-card {
+  max-width: 600px;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.quote-text {
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.quote-author {
+  font-size: 1.2rem;
+  color: #777;
+  font-style: italic;
+}
+
+button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #555;
 }
